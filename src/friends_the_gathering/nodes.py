@@ -113,11 +113,11 @@ class RandomNumber:
 
     @classmethod
     def INPUT_TYPES(s):
-        return {"required":  {"min": ("INT",), "max": ("INT",)}}
+        return {"required":  {"min": ("INT",), "max": ("INT",), "trigger": ("INT",)}}
     RETURN_TYPES = ("INT",)
     FUNCTION = "run"
 
-    def run(self, min, max):
+    def run(self, min, max, trigger):
 
         print()
         print(f"Min: {min}")
@@ -134,9 +134,9 @@ NODE_CLASS_MAPPINGS = {
     "Random Number": RandomNumber,
 }
 
-# Optionally, you can rename the node in the `NODE_DISPLAY_NAME_MAPPINGS` dictionary.
+# Optionally, you can rename the node in the `NODE_DISPLAY_NAME_MAPPINGS`
+# dictionary.
 NODE_DISPLAY_NAME_MAPPINGS = {
     "Example": "Example Node",
     "Random Number": "Random Number",
 }
-
